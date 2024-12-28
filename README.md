@@ -8,7 +8,7 @@ It's a completely secure application using JWT Tokens, HTTP-Only Cookies, Signed
 
 ## Key features:
 
-- based on mern stack
+- based on MERN Stack
 - Create user authentication and authorization system
 - Implementing express-validators middleware to validate data
 - Storing user's chats in MongoDB
@@ -44,3 +44,18 @@ Steps to Build:
 
 * hash password through bcrypt lib
 * validations middleware: express-validator 
+* SignUp and login successfully 
+
+* Authentication:  is  a step in which the user needs to verify their identity. For this application, The user needs to provide the email and password which it created during the registration process.The user will be provided a token after auth process .
+
+ * Authorization: Once the user authenticates, he is provided a token. Now to access a resource, the user needs to show a token that was send during authentication. This ensure that the user is entitled to a resource.
+
+* JWT : JSON WEB TOKEN
+       is used to encrypt a payload into a singed token that has the permissions or authorities of the user.
+       
+This token send via HTTP Only Cookies
+
+* HTTP-Only Cookies: 
+* user authentication----->sets http only signed cookies with jwt token ----->user has token--->user send back the cookies---> it maches or not ?
+
+
