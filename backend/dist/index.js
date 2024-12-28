@@ -1,11 +1,10 @@
-import express from "express";
-const app = express();
-// GET 
-app.get("/hello", (req, res, next) => {
-    return res.send("hello");
-});
-// PUT
-// POST
-// DELETE
-app.listen(5000, () => console.log("Server Open"));
+import app from "./app.js";
+import connectToDatabase from "./db/connection.js";
+//connections and listeners
+const PORT = process.env.PORT || 5000;
+connectToDatabase()
+    .then(() => {
+    app.listen(PORT, () => console.log("Server Open And Connected To Database"));
+})
+    .catch((err) => console.log(err));
 //# sourceMappingURL=index.js.map

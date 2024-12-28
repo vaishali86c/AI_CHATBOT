@@ -22,3 +22,25 @@ It's a completely secure application using JWT Tokens, HTTP-Only Cookies, Signed
 - Integrating OpenAI with Node, Express MERN stack app
 - A full stack ChatGPT like clone
 - Storing user sessions
+
+
+
+Steps to Build:
+
+1. Setup Node, Express App with Typescript
+2. Integrate MongoDB Database Connection
+3. Register/Login On OpenAi Portal, Get API Keys
+4. Build A Secure Authentication With Tokens and HTTP-only singed cookies
+
+ * npm i morgan -  It helps developers monitor and debug their applications by providing detailed information about incoming requests and responses.
+ * Routes -  a router in the backend acts as a traffic controller, directing HTTP requests to the right logic based on the URL and method.
+ * controllers folder: handle the incoming request for the user
+ * models folder : for the database schema
+
+ User : name 
+        email
+        password
+        chats: chat[]
+
+* hash password through bcrypt lib
+* validations middleware: express-validator 
