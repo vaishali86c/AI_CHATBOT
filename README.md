@@ -63,3 +63,4 @@ This token send via HTTP Only Cookies
 * icons: use react icons 
 * router: react router dom for routing 
 * notifications: Toast lib (react-hot-toast)
+* context api
