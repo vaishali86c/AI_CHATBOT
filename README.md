@@ -58,4 +58,8 @@ This token send via HTTP Only Cookies
 * HTTP-Only Cookies: 
 * user authentication----->sets http only signed cookies with jwt token ----->user has token--->user send back the cookies---> it maches or not ?
 
-
+* react app setup
+* use material ui lib 
+* icons: use react icons 
+* router: react router dom for routing 
+* notifications: Toast lib (react-hot-toast)
