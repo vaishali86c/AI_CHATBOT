@@ -4,6 +4,7 @@ import { useAuth } from "../context/AuthContext";
 import ChatItems from "../components/chat/ChatItem";
 import { IoMdSend } from "react-icons/io";
 import { useRef, useState } from "react";
+import { sendChatRequest } from "../helpers/api-communicator";
 type Message = {
     role: string,
     content: string,
@@ -22,7 +23,12 @@ const Chat = () => {
         }
         const newMessage: Message = {role: "user", content };
         setChatMessages((prev) => [...prev, newMessage]);
+        const chatData = await sendChatRequest(content);
+        setChatMessages([...chatData.chats]);
+        //
     };
+
+
 
     // Add a fallback check for user name length to avoid errors
     const getAvatarText = () => {

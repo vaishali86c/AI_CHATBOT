@@ -15,7 +15,7 @@ export const verifyToken = async (
     req: Request,
     res: Response,
     next: NextFunction
-  ) => {    
+  ) => {  
     const token = req.signedCookies[`${COOKIE_NAME}`];
     console.log("token: ", req.signedCookies);
     if (!token || token.trim() === "") {
